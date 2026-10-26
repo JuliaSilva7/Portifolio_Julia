@@ -200,3 +200,141 @@ h1 { font-size: clamp(48px, 5.6vw, 75px); line-height: 1.07; letter-spacing: -4.
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+
+
+/* ===== MELHORIA DA LEGIBILIDADE ===== */
+
+/* Menu de navegação */
+.nav-links {
+  font-size: 14px;
+}
+
+/* Pequenos títulos e identificadores das seções */
+.eyebrow,
+.section-kicker {
+  font-size: 12px;
+}
+
+/* Descrição principal */
+.hero-description {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* Botões */
+.button {
+  font-size: 14px;
+}
+
+/* Links sociais */
+.hero-socials {
+  font-size: 13px;
+}
+
+/* Textos da seção de introdução */
+.intro-note {
+  font-size: 13px;
+}
+
+.intro-note small {
+  font-size: 12px;
+}
+
+/* Descrição ao lado dos títulos das seções */
+.section-heading > p {
+  font-size: 15px;
+}
+
+/* Filtros dos projetos */
+.filter {
+  font-size: 12px;
+}
+
+/* Informações dos projetos */
+.project-meta {
+  font-size: 11px;
+}
+
+.project-body h3 {
+  font-size: 22px;
+}
+
+.project-subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-description {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* Tecnologias utilizadas nos projetos */
+.tag {
+  font-size: 11px;
+}
+
+/* Links dos projetos */
+.project-links a {
+  font-size: 13px;
+}
+
+/* Cards de habilidades */
+.skill-card h3 {
+  font-size: 19px;
+}
+
+.skill-items span {
+  font-size: 13px;
+}
+
+/* Seção de contato */
+.contact-card > p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-socials a {
+  font-size: 12px;
+}
+
+/* Rodapé */
+.site-footer {
+  font-size: 11px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 680px) {
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section-heading > p {
+    font-size: 14px;
+  }
+
+  .project-body h3 {
+    font-size: 21px;
+  }
+
+  .project-subtitle {
+    font-size: 14px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+
+  .tag {
+    font-size: 11px;
+  }
+
+  .skill-items span {
+    font-size: 13px;
+  }
+
+  .contact-card > p {
+    font-size: 15px;
+  }
+}

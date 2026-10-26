@@ -7,7 +7,7 @@ import {
 
 const GITHUB = 'https://github.com/JuliaSilva7'
 const LINKEDIN = 'https://www.linkedin.com/in/julia-silva7788/'
-const EMAIL = 'seu.email@exemplo.com' // Troque pelo seu e-mail profissional.
+const EMAIL = 'juliacarolina07@gmail.com'
 
 const projects = [
   {
@@ -70,7 +70,7 @@ const projects = [
 
 const skills = [
   { title: 'Desenvolvimento', icon: Code2, items: ['JavaScript', 'React', 'React Native', 'HTML & CSS', 'Java', 'Python'] },
-  { title: 'Dados & BI', icon: Database, items: ['SQL', 'Pandas', 'Power BI', 'Excel', 'ETL', 'Visualização de dados'] },
+  { title: 'Dados & BI', icon: Database, items: ['SQL', 'Pandas', 'Power BI', 'Excel', 'ETL'] },
   { title: 'Ferramentas', icon: Terminal, items: ['Git & GitHub', 'VS Code', 'Visual Studio', 'Expo', 'Kanban'] },
 ]
 
@@ -146,7 +146,10 @@ function ProjectVisual({ project }) {
 
 function ProjectCard({ project, index }) {
   return (
-    <article className="project-card" data-reveal style={{ '--delay': `${index * 90}ms` }}>
+    <article
+  className="project-card"
+  style={{ '--delay': `${index * 90}ms` }}
+>
       <ProjectVisual project={project} />
       <div className="project-body">
         <div className="project-meta"><span>{project.category}</span><span>{project.status}</span></div>
@@ -225,7 +228,21 @@ function App() {
             <p>Ideias, estudos e soluções que representam minha evolução e meus interesses na área de tecnologia.</p>
           </div>
           <div className="filter-row" aria-label="Filtrar projetos">
-            <div className="filter-buttons">{filters.map(item => <button key={item} onClick={() => setFilter(item)} className={filter === item ? 'filter active' : 'filter'}>{item}</button>)}</div>
+           
+<div className="filter-buttons" role="group" aria-label="Categorias de projetos">
+  {filters.map((item) => (
+    <button
+      key={item}
+      type="button"
+      aria-pressed={filter === item}
+      onClick={() => setFilter(item)}
+      className={filter === item ? 'filter active' : 'filter'}
+    >
+      {item}
+    </button>
+  ))}
+</div>
+
             <span className="project-count">0{visibleProjects.length} PROJETOS</span>
           </div>
           <div className="project-grid">{visibleProjects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
